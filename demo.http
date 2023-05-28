@@ -1,0 +1,164 @@
+
+
+### GET Home page
+http://localhost:3001/home
+
+
+### GET login page
+GET http://localhost:3001/api/books/mod
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTI0ZTllOTkwODhjZWVlOTA2NDdlMSIsImlhdCI6MTY3NTc3NTY3MiwiZXhwIjoxNjc1ODYyMDcyfQ._ap3xTC4M4ZZ9Lx_-QhfmD2-N20qBZQlaRDYT73v2m8
+
+### GET login page
+POST   http://localhost:3001/api/cards
+Content-Type: application/json
+
+{
+    "name": "Pizza",
+    "description":"Best Pizza",
+    "phone": "050-3321366",
+    "bizNumber": 1232,
+    "image": "http://acn.com/image.png",
+    "address": "Some place"
+}
+
+
+### 
+GET   http://localhost:3001/api/auth/allusers
+
+
+###
+POST    http://localhost:3001/api/students
+Content-Type: application/json
+
+{
+    "firstName": "Lishay",
+    "lastName": "Shem Tov",
+    "email": "Lishays100@gmail.com"
+}
+####
+POST http://localhost:3001/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "Bruce",
+    "email": "Lishaysr100@gmail.com",
+    "password" : "Lishay123@"
+}
+####
+POST http://localhost:3001/api/auth/signin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password" : "Admin1234@"
+}
+###
+POST http://localhost:3001/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "john1213",
+    "email": "Lishay22@gmail.com",
+    "password" : "Lishay1311@",
+    "phone" : "0503322366"
+}
+
+###
+POST http://localhost:3001/api/auth/isadmin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password" : "Admin1234@"
+}
+
+####
+POST  http://localhost:3001/api/games/addgame
+Content-Type: application/json
+
+ {
+    "title": "Fifa 22",
+    "price": 70,
+    "frontImage":
+      "https://www.bestmobile.co.il/cdn-cgi/image/format=auto,metadata=none,quality=85,fit=pad/media/catalog/product/image/37219fbdf/mwhq-fifa-23-l-ps5.jpg",
+    "iframe": "https://www.youtube.com/embed/o3V-GvvzjE4",
+    "rating": 8,
+    "description":
+      "Legendary sports franchise returns bringing new technologies to the table. FIFA 23 introduces HyperMotion2 Technology, World Cup and Women's World Cup, and many new and exciting features that are guaranteed to appeal to every football fan! Enjoy football matches with your dream team of the best players in the world and admire the astounding modern graphics that include over 6000 realistic animations. Never before has virtual football been so immersive and the line between the professional game and video game so blurred.",
+    "img1": "https://images.g2a.com/uiadminimages/770x443/1x1x1/568c927e7420/a9315b90684f4cc0a7befe7d",
+    "img2": "https://images.g2a.com/uiadminimages/770x443/1x1x1/ba0be2a95875/7823cf9b37154f4d80fc3278"
+  }
+
+####
+PUT http://localhost:3001/api/games/update/63ea0e1f4be843d1f094a29c
+Content-Type: application/json
+
+{
+  "title" : "Fifa 23",
+  "price" : 70
+}
+####
+GET http://localhost:3001/api/games/search/12321
+####
+GET http://localhost:3001/api/games/sortByPricelth
+
+###
+GET http://localhost:3001/api/games/admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjYyYjlmZmNhOWE4NTcxNWM1NmUwNiIsImlhdCI6MTY4MzI5Mzk2OCwiZXhwIjoxNjgzMzgwMzY4fQ.WitJzA3mnW2Wahkk0CF9O9tyvduAXinLPdWO6GsADU4
+
+
+###
+###POST to /api/users
+POST http://localhost:3001/api/hotels/addproperty
+Content-Type: "application/json"
+
+{
+    "title": "Fifa 22",
+    "price": 70,
+    "frontImage":
+      "https://www.bestmobile.co.il/cdn-cgi/image/format=auto,metadata=none,quality=85,fit=pad/media/catalog/product/image/37219fbdf/mwhq-fifa-23-l-ps5.jpg",
+    "iframe": "https://www.youtube.com/embed/o3V-GvvzjE4",
+    "rating": 8,
+    "description":
+      "Legendary sports franchise returns bringing new technologies to the table. FIFA 23 introduces HyperMotion2 Technology, World Cup and Women's World Cup, and many new and exciting features that are guaranteed to appeal to every football fan! Enjoy football matches with your dream team of the best players in the world and admire the astounding modern graphics that include over 6000 realistic animations. Never before has virtual football been so immersive and the line between the professional game and video game so blurred.",
+    "img1": "https://images.g2a.com/uiadminimages/770x443/1x1x1/568c927e7420/a9315b90684f4cc0a7befe7d",
+    "img2": "https://images.g2a.com/uiadminimages/770x443/1x1x1/ba0be2a95875/7823cf9b37154f4d80fc3278"
+  }
+
+###
+POST http://localhost:3001/api/games/addgame
+Content-Type: "application/json"
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjYyYjlmZmNhOWE4NTcxNWM1NmUwNiIsImlhdCI6MTY3NzQ5MTQwOCwiZXhwIjoxNjc3NTc3ODA4fQ.1xSd8E2lyVHYT0Pr1JyL0QjpHzsXCRX8sr8gUR6nE_g
+
+{
+  "title" : "Club hotel"
+}
+
+
+###
+POST http://localhost:3001/api/carusel/add
+Content-Type: "application/json"
+
+{
+"img":"https://res.cloudinary.com/dabvgy03h/image/upload/c_scale,h_1080/v1678…",
+"title":"God Of War: Rangrok",
+"link":"63ea0c957d28bb1b9e042084"
+}
+
+###
+GET http://localhost:3001/api/games/admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjYyYjlmZmNhOWE4NTcxNWM1NmUwNiIsImlhdCI6MTY4MzI5Mzk2OCwiZXhwIjoxNjgzMzgwMzY4fQ.WitJzA3mnW2Wahkk0CF9O9tyvduAXinLPdWO6GsADU4
+
+
+###
+POST http://localhost:3001/api/students/addStudent
+Content-Type: "application/json"
+
+{
+  "firstname" : "lis",
+  "lastname" : "shemtov",
+  "email":"lishayst100@gmail.com"
+}
+
+###
+GET http://localhost:3001/api/students/students
