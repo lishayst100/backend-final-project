@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 app.use('/api/auth', AuthRouter)
-app.get('/home' , (req,res)=>{
+app.get('/' , (req,res)=>{
     res.json({message: 'home'})
 })
 
@@ -39,6 +39,6 @@ app.use('/api/students', studentRouter)
 app.use(notFound)
 
 
-const PORT = 3001
+const PORT = process.env.PORT ?? 3001
 
 app.listen(PORT, ()=> console.log(`Server running on ${PORT}`))
