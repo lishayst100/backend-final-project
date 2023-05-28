@@ -6,8 +6,8 @@ import { Role } from './models/role.js'
 const {DB,HOST,PORT,ROLES} = dbConfig
 const connect = async () =>{
     mongoose.set("strictQuery", false)
-    await mongoose.connect(`mongodb://${HOST}:${PORT}/${DB}`)
-   // await mongoose.connect(dbConfig.ConnectionString)
+   // await mongoose.connect(`mongodb://${HOST}:${PORT}/${DB}`)
+   await mongoose.connect(dbConfig.ConnectionString)
     console.log(`Connected to DataBase ${DB}`);
     initDB()
     
