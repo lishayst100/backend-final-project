@@ -22,6 +22,7 @@ app.use(morgan('dev'))
 
 app.use('/api/auth', AuthRouter)
 app.get('/' , (req,res)=>{
+    console.log(process.env.PORT)
     res.json({message: 'home'})
 })
 

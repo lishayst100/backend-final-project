@@ -1,3 +1,4 @@
+var _a;
 import express from 'express';
 import notFound from './middleware/404.js';
 import morgan from 'morgan';
@@ -15,7 +16,8 @@ app.use(cors({ allowedHeaders: ["Content-Type", "Authorization"] }));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use('/api/auth', AuthRouter);
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
+    console.log(process.env.PORT);
     res.json({ message: 'home' });
 });
 app.get('/api/login', login);
@@ -24,5 +26,5 @@ app.use('/api/carusel', caruselRouter);
 app.use('api/users', AuthRouter);
 app.use('/api/students', studentRouter);
 app.use(notFound);
-const PORT = 3001;
+const PORT = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 3001;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
