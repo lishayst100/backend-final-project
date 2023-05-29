@@ -1,14 +1,12 @@
 import { Schema } from "mongoose";
-const cart = new Schema({
-    userId: { type: String },
-    gameList: []
-});
 const order = new Schema({
-    user: { type: String },
-    // cart: 
+    creditCardName: String,
+    orderDetails: Array,
+    CartTotalAmount: Number,
+    address: String,
+    username: String,
+    email: String,
+    date: String,
+    status: String,
 });
-/*
-// type id = userId
-// game list
-*/
-export { order as orderSchema };
+export { order };

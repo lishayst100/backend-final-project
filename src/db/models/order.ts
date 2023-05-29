@@ -1,7 +1,7 @@
 import { model } from "mongoose";
-import { orderSchema } from "../schemas/order.js";
+import { order } from "../schemas/order.js";
 
-const Order = model('Order', orderSchema)
+const Order = model('Order', order)
 
 
 export {Order}
