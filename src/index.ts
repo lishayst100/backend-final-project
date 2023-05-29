@@ -22,10 +22,9 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 app.use('/api/auth', AuthRouter)
-app.get("/", (req, res) => {
-  Game.find()
-    .then((result) => res.json(result))
-    .catch((e) => res.json({ error: `${e}` }));
+app.get("/", async (req, res) => {
+  let result = await Game.find().sort({ price: 1 });
+  res.json(result);
 });
 
 
