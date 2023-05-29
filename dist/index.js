@@ -9,6 +9,7 @@ import { AuthRouter } from './routes/users.js';
 import { gamesRouter } from './routes/games.js';
 import { caruselRouter } from './routes/carusel.js';
 import { studentRouter } from './routes/student.js';
+import { Game } from './db/models/gameModel.js';
 const app = express();
 connect().catch(e => console.log(e));
 //middlewares
@@ -16,9 +17,10 @@ app.use(cors({ allowedHeaders: ["Content-Type", "Authorization"] }));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use('/api/auth', AuthRouter);
-app.get('/', (req, res) => {
-    console.log(process.env.PORT);
-    res.json({ message: 'home' });
+app.get("/", (req, res) => {
+    Game.find()
+        .then((result) => res.json(result))
+        .catch((e) => res.json({ error: `${e}` }));
 });
 app.get('/api/login', login);
 app.use('/api/games', gamesRouter);
